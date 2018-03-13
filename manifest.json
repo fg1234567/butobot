@@ -1,0 +1,18 @@
+{
+
+	"manifest_version":2,
+
+	"name":"Bout-O'Bot",
+	"description": "Update your database instantly.",
+	"version":"1.0",
+
+	"browser_action": {
+		"default_icon":"../icons/icon.png",
+		"default_popup":"popup.html"
+	},
+
+	"permissions": [
+		"storage"
+	]
+
+}

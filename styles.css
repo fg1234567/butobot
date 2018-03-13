@@ -1,0 +1,49 @@
+body {
+  background-color: lightgrey;
+}
+
+div.title {
+  position: -webkit-sticky;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  position: sticky;
+  top: 1px;
+  border-bottom: 5px;
+  border-color: black;
+  padding: 3px;
+  background-color: lightgrey;
+}
+
+img {
+  height: 50px;
+  margin-top: : 10px;
+  margin-left: : 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+h2 {
+  margin-top: 1px;
+}
+
+#addHat {
+  margin-bottom: 10px;
+}
+
+#decrementHat {
+  margin-bottom: 10px;
+}
+/*burası çalışmmadı nedenini bilmiyorum*/
+/*
+.imgAlgn {
+  vertical-align: ;
+  margin-bottom: 2px;
+}
+
+.txtAlgn {
+  font-size: 40px;
+}
+*/

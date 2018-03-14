@@ -1,3 +1,4 @@
+//Writes the strored values of items when the extention opens
 $(function() {
 	chrome.storage.sync.get('Hat', function(items) {
 		var newTotal = parseInt(items.Hat);
@@ -39,7 +40,7 @@ $(function() {
 		$('#Pants').text(newTotal);
 	});
 });
-
+//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
 
 
 // commands for Hat
@@ -54,6 +55,7 @@ $(function() {
 			if (amount) {	newTotal += parseInt(amount);	}
 			else { newTotal ++; }
 
+			if(newTotal < 0){ newTotal = 0;}
 			chrome.storage.sync.set({ 'Hat': newTotal });
 
 			$('#Hat').text(newTotal);
@@ -73,20 +75,11 @@ $(function() {
 			if (amount) {	newTotal -= parseInt(amount); }
 			else { newTotal --; }
 
-			if(newTotal > 0 || newTotal == 0){
+			if(newTotal < 0){ newTotal = 0;}
 			chrome.storage.sync.set({ 'Hat': newTotal });
 
 			$('#Hat').text(newTotal);
 			$('#amountOfHat').val('');
-			}
-
-			else{
-				newTotal = 0;
-				chrome.storage.sync.set({ 'Hat': newTotal });
-
-				$('#Hat').text(newTotal);
-				$('#amountOfHat').val('');
-			}
 		});
 	});
 });
@@ -103,6 +96,7 @@ $(function() {
 			if (amount) {	newTotal += parseInt(amount); }
 			else { newTotal ++; }
 
+			if(newTotal < 0){ newTotal = 0; }
 			chrome.storage.sync.set({ 'Shoes': newTotal });
 
 			$('#Shoes').text(newTotal);
@@ -122,20 +116,11 @@ $(function() {
 			if (amount) { newTotal -= parseInt(amount);	}
 			else { newTotal --; }
 
-			if(newTotal > 0 || newTotal == 0 ){
+			if(newTotal < 0 ){ newTotal = 0;}
 			chrome.storage.sync.set({ 'Shoes': newTotal });
 
 			$('#Shoes').text(newTotal);
 			$('#amountOfShoes').val('');
-			}
-
-			else{
-			newTotal = 0;
-			chrome.storage.sync.set({ 'Shoes': newTotal });
-
-			$('#Shoes').text(newTotal);
-			$('#amountOfShoes').val('');
-		 }
 		});
 	});
 });
@@ -153,6 +138,7 @@ $(function() {
 			if (amount) {	newTotal += parseInt(amount); }
 			else { newTotal ++; }
 
+			if(newTotal < 0 ){ newTotal = 0;}
 			chrome.storage.sync.set({ 'Ring': newTotal });
 
 			$('#Ring').text(newTotal);
@@ -172,22 +158,11 @@ $(function() {
 			if (amount) { newTotal -= parseInt(amount);	}
 			else { newTotal --; }
 
-			if(newTotal > 0 || newTotal == 0 ){
+			if(newTotal < 0 ){ newTotal = 0; }
 			chrome.storage.sync.set({ 'Ring': newTotal });
 
 			$('#Ring').text(newTotal);
 			$('#amountOfRing').val('');
-			}
-
-			else{
-			newTotal = 0;
-			chrome.storage.sync.set({ 'Ring': newTotal });
-
-			$('#Ring').text(newTotal);
-			$('#amountOfRing').val('');
-			}
-
-
 		});
 	});
 });
@@ -204,6 +179,7 @@ $(function() {
 			if (amount) {	newTotal += parseInt(amount); }
 			else { newTotal ++; }
 
+			if(newTotal < 0 ){ newTotal = 0;}
 			chrome.storage.sync.set({ 'Necklace': newTotal });
 
 			$('#Necklace').text(newTotal);
@@ -223,21 +199,11 @@ $(function() {
 			if (amount) { newTotal -= parseInt(amount);	}
 			else { newTotal --; }
 
-			if(newTotal > 0 || newTotal == 0 ){
+			if(newTotal < 0 ){ newTotal = 0; }
 			chrome.storage.sync.set({ 'Necklace': newTotal });
 
 			$('#Necklace').text(newTotal);
 			$('#amountOfNecklace').val('');
-		  }
-
-			else{
-			newTotal = 0;
-			chrome.storage.sync.set({ 'Necklace': newTotal });
-
-			$('#Necklace').text(newTotal);
-			$('#amountOfNecklace').val('');
-		  }
-
 		});
 	});
 });
@@ -255,6 +221,7 @@ $(function() {
 			if (amount) {	newTotal += parseInt(amount); }
 			else { newTotal ++; }
 
+			if(newTotal < 0 ){ newTotal = 0;}
 			chrome.storage.sync.set({ 'Jacket': newTotal });
 
 			$('#Jacket').text(newTotal);
@@ -274,21 +241,11 @@ $(function() {
 			if (amount) { newTotal -= parseInt(amount);	}
 			else { newTotal --; }
 
-			if(newTotal > 0 || newTotal == 0 ){
+			if(newTotal < 0 ){ newTotal = 0; }
 			chrome.storage.sync.set({ 'Jacket': newTotal });
 
 			$('#Jacket').text(newTotal);
 			$('#amountOfJacket').val('');
-		  }
-
-			else{
-			newTotal = 0;
-			chrome.storage.sync.set({ 'Jacket': newTotal });
-
-			$('#Jacket').text(newTotal);
-			$('#amountOfJacket').val('');
-		  }
-
 		});
 	});
 });
@@ -306,6 +263,7 @@ $(function() {
 			if (amount) {	newTotal += parseInt(amount); }
 			else { newTotal ++; }
 
+			if(newTotal < 0 ){ newTotal = 0;}
 			chrome.storage.sync.set({ 'Pants': newTotal });
 
 			$('#Pants').text(newTotal);
@@ -325,21 +283,11 @@ $(function() {
 			if (amount) { newTotal -= parseInt(amount);	}
 			else { newTotal --; }
 
-			if(newTotal > 0 || newTotal == 0 ){
+			if(newTotal < 0 ){ newTotal = 0; }
 			chrome.storage.sync.set({ 'Pants': newTotal });
 
 			$('#Pants').text(newTotal);
 			$('#amountOfPants').val('');
-		  }
-
-			else{
-			newTotal = 0;
-			chrome.storage.sync.set({ 'Pants': newTotal });
-
-			$('#Pants').text(newTotal);
-			$('#amountOfPants').val('');
-		  }
-
 		});
 	});
 });
